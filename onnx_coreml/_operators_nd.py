@@ -338,7 +338,7 @@ def _convert_bn(builder, node, graph, err):
         # 2D Batch Norm
         add_bn_with_expansion(builder, node, err, node.name, node.inputs[0], node.outputs[0], channels[0],
                               scale, bias, mean, var, epsilon, axes_for_expansion=[])
-    elif rank == 0
+    elif rank == 0:
         add_bn_with_expansion(builder, node, err, node.name, node.inputs[0], node.outputs[0], channels[0],
                               scale, bias, mean, var, epsilon, axes_for_expansion=[-1])    
     else:
